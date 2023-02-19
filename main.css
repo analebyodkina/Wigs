@@ -2,7 +2,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-html, body, h1, h2, h3, h4, ul {
+html, body, p, h1, h2, ul {
     margin: 0;
 }
 html, body {
@@ -24,6 +24,9 @@ a:active {
 }
 ul {
     list-style: none;
+}
+h1, h2, .main__link {
+    font-weight: 700;
 }
 .container {
     margin-inline: auto;
@@ -68,10 +71,11 @@ ul {
 .sidebar__logo {
     margin-bottom: 57px;
 }
-h1 {
+h1, h2 {
     font-size: 30px;
-    font-weight: 700;
     line-height: 37px;
+}
+h1 {
     margin-bottom: 54.25px;
 }
 .sidebar__links {
@@ -128,10 +132,34 @@ h1 {
 .main img:not(.heartIcon) {
     max-width: 100%;
     border-radius: 15px;    
-    object-fit: cover;
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 11px;
+    padding-left: 30px;
+}
+.main__link { 
+    font-size: 26px;
+    line-height: 32px;
+}
+p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
 }
 .main__img1{
-    grid-area: img1;
+    grid-area: img1;     
+    align-items: center;     
+    text-transform: uppercase;
+    background: url(img/Group\ 14.png) no-repeat center;
+    background-size: cover;
+    justify-content: center;
+    border-radius: 15px;  
+    padding: 0;
 }
 .main__img2{
     grid-area: img2;
@@ -154,10 +182,23 @@ h1 {
 }
 .main__img7{
     grid-area: img7;
+    background: url(img/image7.png) center no-repeat;
+    background-size: cover;
+    border-radius: 15px;  
+}
+.main__img7 a {
+    color: #001AA2;
 }
 .main__img8{
     grid-area: img8;
-    background: #E9E5E2;    
+    background: #E9E5E2; 
+    color: #FD2E24;  
+    background: url(img/image8.png) no-repeat;
+    background-size: cover;
+    border-radius: 15px;  
+}
+.main__img8 a {
+    color: #FD2E24;  
 }
 .circle {
     cursor: pointer;
@@ -187,3 +228,27 @@ h1 {
     max-width: 50%;
     max-height: 50%;
 }
+@media screen and (max-width: 992px) {
+    .main {
+        grid-template-columns: repeat(2, fit-content);
+        grid-auto-rows: 180px;
+        grid-template-areas: 
+        "img1 img1"
+        "img2 img2"
+        "img3 img4"
+        "img3 img4"        
+        "img5 img6"
+        "img5 img6"
+        "img7 img7"
+        "img8 img8";
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding: 20px 30px;
+    }
+    .main {
+        padding: 0 25px;
+    }
+}
+    
