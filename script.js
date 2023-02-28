@@ -23,3 +23,11 @@ function naToggle() {
     var navToggleBtn = document.getElementById("heartBlack3");
     navToggleBtn.classList.toggle("active");
   }
+  function burgerToggle() {
+    var navToggleBtn = document.getElementById("headerUl");
+    navToggleBtn.classList.toggle("active");
+  }
+  function sideToggle() {
+    var navToggleBtn = document.getElementById("sidebar");
+    navToggleBtn.classList.toggle("active");
+  }
